@@ -19,10 +19,14 @@ text1 and text2 consist of only lowercase English characters.
 
 ## Algorithm
 1️. Let m and n be lengths of text1 and text2, and create a dp[m+1][n+1] table.
+
 2️. For each character i in text1 and j in text2:
   If text1[i−1] == text2[j−1], then dp[i][j] = dp[i−1][j−1] + 1.
+  
 3️. Otherwise, dp[i][j] = max(dp[i−1][j], dp[i][j−1]).
+
 4️. Continue filling the table until both strings are fully processed.
+
 5️. Return dp[m][n] — the length of the longest common subsequence.
 
 ## Program:

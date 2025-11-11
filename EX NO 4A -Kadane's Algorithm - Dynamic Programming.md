@@ -19,9 +19,10 @@ A single integer: Maximum net energy collectable from a contiguous block (wrappi
 
 Constraints:
 1 <= n <= 10^6
-## Algorithm
+## Algorithm:
 1. Initialize variables: totalSum, maxKadane, minKadane, currentMax, currentMin.
-2. Traverse the array once, updating: currentMax = max(val, currentMax + val), maxKadane = max(maxKadane, currentMax), currentMin =      min(val,currentMin + val), minKadane = min(minKadane, currentMin)
+2. Traverse the array once, updating: currentMax = max(val, currentMax + val), maxKadane = max(maxKadane, currentMax),
+  currentMin =min(val,currentMin + val), minKadane = min(minKadane, currentMin).
 3. Add each element to totalSum.
 4. If all values are negative → return maxKadane.
 5. Else → return max(maxKadane, totalSum - minKadane).

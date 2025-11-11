@@ -10,10 +10,14 @@ Output: 4
 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
 ## Algorithm
 1️. Initialize a dp array of size n, filled with 1 (each element is an LIS of length 1).
+
 2️. For each index i from 1 to n-1:
   Compare with all previous indices j < i.
+  
 3️. If nums[i] > nums[j], update dp[i] = max(dp[i], dp[j] + 1).
+
 4️. Track maxLen = max(maxLen, dp[i]) after each iteration.
+
 5️. Return maxLen — the length of the longest increasing subsequence.  
 
 ## Program:
